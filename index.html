@@ -1,121 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Neilnath | Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
-        body { 
-            background: #000; 
-            color: #0ff; 
-            font-family: 'Orbitron', sans-serif; 
-            text-align: center; 
-            overflow: hidden;
-        }
-
-        /* Particle Background */
-        #particles-js { 
-            position: absolute; 
-            width: 100%; 
-            height: 100%; 
-            z-index: -1; 
-        }
-
-        /* Glowing Navbar */
-        .navbar {
-            background: rgba(0, 0, 0, 0.7);
-            border-bottom: 2px solid cyan;
-            box-shadow: 0 0 10px cyan;
-        }
-        .navbar a {
-            color: cyan;
-            transition: 0.3s;
-        }
-        .navbar a:hover {
-            color: #000;
-            background: cyan;
-            border-radius: 5px;
-            box-shadow: 0 0 15px cyan;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            flex-direction: column;
-        }
-        h1 {
-            font-size: 3rem; 
-            text-shadow: 0 0 10px cyan; 
-        }
-
-        .btn-glow {
-            background: transparent; 
-            border: 2px solid cyan; 
-            color: cyan; 
-            padding: 10px 20px; 
-            transition: 0.3s;
-        }
-        .btn-glow:hover {
-            background: cyan; 
-            color: #000; 
-            box-shadow: 0 0 15px cyan;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Portfolio | Neilnath</title>
 </head>
 <body>
+<div class="main-web fade-in">
+  <div class="navbar">
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li> 
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#contacts">CONTACT</a></li>
+    </ul>
+  </div>
 
-    <!-- Particle Background -->
-    <div id="particles-js"></div>
-
-    <!-- Glowing Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">Neilnath</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1 id="title">Neilnath</h1>
-        <p>Mern Stack | Developer</p>
-        <button class="btn btn-glow">Click Me</button>
+  <section id="home" class="home-section">
+    <div class="main">
+      <h2>Neilnath
+        <span>Neilnath</span>
+        <span>Neilnath</span>
+        <span>Front end developer</span>
+      </h2>
+      <p>Self taught web developer</p>
+      <a href="my-cv.pdf" download class="btn">Download CV</a>
     </div>
+  </section>
+  
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>Hi, I'm Neil Nath, a passionate developer from India with a strong interest in building creative and secure applications.</p>
+      <p>I enjoy working on both frontend and backend technologies, and I'm always exploring new tools and frameworks to push my skills further.</p>
+      <p>Whether it's developing modern web interfaces, crafting smart mobile apps, or diving deep into system-level programming and cybersecurity</p>
+    </div>
+  </section>
 
-    <!-- GSAP Animation -->
-    <script>
-        gsap.from("#title", { opacity: 0, y: -50, duration: 1.5, ease: "power3.out" });
-        gsap.to(".hero", { background: "radial-gradient(circle, rgba(0,255,255,0.1) 0%, rgba(0,0,0,1) 100%)", duration: 2 });
-    </script>
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <p>Here are some of my recent projects:</p>
+    <ul>
+      <li><a href="index.html" target="_blank">Portfolio Website</a></li>
+    </ul>
+  </section>
 
-    <!-- Particles.js -->
-    <script>
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 100 },
-                color: { value: "#0ff" },
-                shape: { type: "circle" },
-                opacity: { value: 0.5 },
-                size: { value: 3 },
-                move: { enable: true, speed: 2 }
-            }
-        });
-    </script>
-
+  <section id="contacts" class="contact-section">
+    <h2>Contact Me</h2>
+    <p>If you would like to get in touch, feel free to reach out via email or connect with me on social media.</p>
+    <p><a button class="btn" target="_blank" href="mailto:neilnath1337@gmail.com">neilnath1337@gmail.com</a></p>
+    <br>
+    <br>
+    <div class="social-icons">
+      <a href="https://github.com/NE1LN47H" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+</div>
 </body>
 </html>
